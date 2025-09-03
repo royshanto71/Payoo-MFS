@@ -10,5 +10,12 @@ const transactions = document.getElementById("transactions");
 
 //add event listeners
 addMoney.addEventListener("click", function () {
-    
+    document.getElementById("cash-out-form").style.display = "none";
+    document.getElementById("add-money-form").style.display = "block";
+    console.log("Add Money clicked");
+});
+cashout.addEventListener("click", function () {
+    document.getElementById("add-money-form").style.display = "none";
+    document.getElementById("cash-out-form").style.display = "block";
+    console.log("Cashout clicked");
 });
