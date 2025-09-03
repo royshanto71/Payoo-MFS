@@ -1,21 +1,64 @@
-//Add Money, Cashout, Transfer Money, Get Bonus, Pay Bill, Transactions toggling feature
+// GET ELEMENTS (menu buttons)
+const addMoneyBtn = document.getElementById("add-money");
+const cashoutBtn = document.getElementById("cashout");
+const transferBtn = document.getElementById("transfer-balance");
+const bonusBtn = document.getElementById("get-bonus");
+const payBillBtn = document.getElementById("pay-bill");
+const transactionsBtn = document.getElementById("transactions");
 
-//get elements
-const addMoney = document.getElementById("add-money");
-const cashout = document.getElementById("cashout");
-const transferBalance = document.getElementById("transfer-balance");
-const getBonus = document.getElementById("get-bonus");
-const payBill = document.getElementById("pay-bill");
-const transactions = document.getElementById("transactions");
+// GET FORM SECTIONS
+const addMoneyForm = document.getElementById("add-money-form");
+const cashOutForm = document.getElementById("cash-out-form");
+const transferForm = document.getElementById("transfer-form");
+const bonusForm = document.getElementById("get-bonus-form");
+const payBillForm = document.getElementById("pay-bill-form");
+const transactionHistory = document.getElementById("transaction-history");
 
-//add event listeners
-addMoney.addEventListener("click", function () {
-    document.getElementById("cash-out-form").style.display = "none";
-    document.getElementById("add-money-form").style.display = "block";
-    console.log("Add Money clicked");
+// HELPER FUNCTION TO HIDE ALL SECTIONS
+function hideAllSections() {
+  addMoneyForm.style.display = "none";
+  cashOutForm.style.display = "none";
+  transferForm.style.display = "none";
+  bonusForm.style.display = "none";
+  payBillForm.style.display = "none";
+  transactionHistory.style.display = "none";
+}
+
+// ADD EVENT LISTENERS FOR TOGGLING
+addMoneyBtn.addEventListener("click", function () {
+  hideAllSections();
+  addMoneyForm.style.display = "block";
+  console.log("Add Money clicked");
 });
-cashout.addEventListener("click", function () {
-    document.getElementById("add-money-form").style.display = "none";
-    document.getElementById("cash-out-form").style.display = "block";
-    console.log("Cashout clicked");
+
+cashoutBtn.addEventListener("click", function () {
+  hideAllSections();
+  cashOutForm.style.display = "block";
+  console.log("Cash Out clicked");
 });
+
+transferBtn.addEventListener("click", function () {
+  hideAllSections();
+  transferForm.style.display = "block";
+  console.log("Transfer Money clicked");
+});
+
+bonusBtn.addEventListener("click", function () {
+  hideAllSections();
+  bonusForm.style.display = "block";
+  console.log("Get Bonus clicked");
+});
+
+payBillBtn.addEventListener("click", function () {
+  hideAllSections();
+  payBillForm.style.display = "block";
+  console.log("Pay Bill clicked");
+});
+
+transactionsBtn.addEventListener("click", function () {
+  hideAllSections();
+  transactionHistory.style.display = "block";
+  console.log("Transactions clicked");
+});
+
+hideAllSections(); // hides everything on page load
