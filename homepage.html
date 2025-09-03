@@ -86,37 +86,43 @@
       <div
         class="text-[rgba(8,8,8,0.7)] font-[Outfit] text-sm font-normal grid grid-cols-3 gap-[16.5px] w-[402px] h-[196.5px] mt-[24px] mx-auto"
       >
-        <div id="add-money-btn"
+        <div
+          id="add-money"
           class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px] cursor-pointer hover:border-[#0874F2] hover:bg-[#F4F5F7] active:border-[#0874F2] active:bg-[#E8F0FE] transition"
         >
           <img src="./assets/wallet1.png" alt="add money" />
           <h3>Add Money</h3>
         </div>
-        <div id="cashout-btn"
+        <div
+          id="cashout"
           class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px] cursor-pointer hover:border-[#0874F2] hover:bg-[#F4F5F7] active:border-[#0874F2] active:bg-[#E8F0FE] transition"
         >
           <img src="./assets/send1.png" alt="Cashout" />
           <h3>Cashout</h3>
         </div>
-        <div id="transfer-btn"
+        <div
+          id="transfer-balance"
           class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px] text-center cursor-pointer hover:border-[#0874F2] hover:bg-[#F4F5F7] active:border-[#0874F2] active:bg-[#E8F0FE] transition"
         >
           <img src="./assets/money1.png" alt="Transfer Money" />
           <h3>Transfer Money</h3>
         </div>
-        <div id="get-bonus-btn"
+        <div
+          id="get-bonus"
           class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px] cursor-pointer hover:border-[#0874F2] hover:bg-[#F4F5F7] active:border-[#0874F2] active:bg-[#E8F0FE] transition"
         >
           <img src="./assets/bonus1.png" alt="Get Bonus" />
           <h3>Get Bonus</h3>
         </div>
-        <div id="pay-bill-btn"
+        <div
+          id="pay-bill"
           class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px] cursor-pointer hover:border-[#0874F2] hover:bg-[#F4F5F7] active:border-[#0874F2] active:bg-[#E8F0FE] transition"
         >
           <img src="./assets/purse1.png" alt="pay bill" />
           <h3>Pay Bill</h3>
         </div>
-        <div id="transactions-btn"
+        <div
+          id="transactions"
           class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px] cursor-pointer hover:border-[#0874F2] hover:bg-[#F4F5F7] active:border-[#0874F2] active:bg-[#E8F0FE] transition"
         >
           <img src="./assets/transaction1.png" alt="Transactions" />
@@ -127,7 +133,7 @@
     <!-- all forms section -->
     <div class="all-forms mt-[31.5px]">
       <!-- add money -->
-      <div>
+      <div id="add-money-form">
         <h1
           class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px]"
         >
@@ -215,7 +221,7 @@
         </form>
       </div>
       <!-- cash out -->
-      <div class="mt-[31.5px]">
+      <div id="cash-out-form" class="mt-[31.5px]">
         <h1
           class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
         >
@@ -284,7 +290,7 @@
         </form>
       </div>
       <!-- transfer money -->
-      <div class="mt-[31.5px]">
+      <div id="transfer-form" class="mt-[31.5px]">
         <h1
           class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
         >
@@ -353,7 +359,7 @@
         </form>
       </div>
       <!-- get bonus section  -->
-      <div class="mt-[31.5px]">
+      <div id="get-bonus-form" class="mt-[31.5px]">
         <h1
           class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
         >
@@ -388,7 +394,7 @@
         </form>
       </div>
       <!-- pay bill section  -->
-      <div class="mt-[31.5px]">
+      <div id="pay-bill-form" class="mt-[31.5px]">
         <h1
           class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
         >
@@ -476,6 +482,13 @@
             Pay Now
           </button>
         </form>
+      </div>
+      <!-- transactions section -->
+      <div
+        id="transaction-history"
+        class="mt-[31.5px] border-2 border-[#0874F2] rounded-3xl w-full max-w-[402px] mx-auto p-5"
+      >
+        <p>this is transaction history</p>
       </div>
     </div>
 
