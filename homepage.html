@@ -283,6 +283,200 @@
           </button>
         </form>
       </div>
+      <!-- transfer money -->
+      <div class="mt-[31.5px]">
+        <h1
+          class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
+        >
+          Transfer Money
+        </h1>
+        <form
+          class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
+        >
+          <!-- User Account Number -->
+          <div>
+            <label
+              for="account-number"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              User Account Number
+            </label>
+            <br />
+            <input
+              type="text"
+              id="account-number"
+              placeholder="Enter 11 digit number"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <!-- Amount -->
+          <div class="mt-[16px]">
+            <label
+              for="amount"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Amount
+            </label>
+            <br />
+            <input
+              type="number"
+              id="amount"
+              placeholder="Enter amount to transfer"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <!-- Pin Number -->
+          <div class="mt-[16px]">
+            <label
+              for="pin"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Pin Number
+            </label>
+            <br />
+            <input
+              type="password"
+              id="pin"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base"
+          >
+            Send Now
+          </button>
+        </form>
+      </div>
+      <!-- get bonus section  -->
+      <div class="mt-[31.5px]">
+        <h1
+          class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
+        >
+          Get Bonus
+        </h1>
+        <form
+          class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
+        >
+          <!-- Bonus Coupon -->
+          <div>
+            <label
+              for="bonus-coupon"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Enter Bonus Coupon
+            </label>
+            <br />
+            <input
+              type="text"
+              id="bonus-coupon"
+              placeholder="Enter your coupon"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base"
+          >
+            Get Bonus
+          </button>
+        </form>
+      </div>
+      <!-- pay bill section  -->
+      <div class="mt-[31.5px]">
+        <h1
+          class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
+        >
+          Pay Bill
+        </h1>
+        <form
+          class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
+        >
+          <!-- Select To Pay -->
+          <div>
+            <label
+              for="biller"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Select To Pay
+            </label>
+            <br />
+            <select
+              id="biller"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base font-outfit rounded-[32px] mt-[12px] w-full cursor-pointer"
+            >
+              <option value="" disabled selected>Select biller</option>
+              <option value="electricity">Electricity</option>
+              <option value="water">Water</option>
+              <option value="internet">Internet</option>
+              <option value="gas">Gas</option>
+            </select>
+          </div>
+
+          <!-- Biller Account Number -->
+          <div class="mt-[16px]">
+            <label
+              for="biller-account"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Biller Account Number
+            </label>
+            <br />
+            <input
+              type="text"
+              id="biller-account"
+              placeholder="Enter account number"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <!-- Amount to Pay -->
+          <div class="mt-[16px]">
+            <label
+              for="amount"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Amount to Pay
+            </label>
+            <br />
+            <input
+              type="number"
+              id="amount"
+              placeholder="Add Amount to pay"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <!-- Pin Number -->
+          <div class="mt-[16px]">
+            <label
+              for="pin"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Pin Number
+            </label>
+            <br />
+            <input
+              type="password"
+              id="pin"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base"
+          >
+            Pay Now
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- js scripts -->
