@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo MFS</title>
+    <!-- tailwind and daisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F4F5F7FF] h-[100vh] flex justify-center items-center flex-col">
+    <!-- bg images -->
+     <div class="w-[316px] h-[130px] flex justify-center items-center bg-[url('./assets/bg.png')] bg-cover">
+        <img src="./assets/Group.png" alt="bg">
+     </div>
+    <!-- form -->
+    <form class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-[402px]">
+      <div>
+        <label for="phone-number" class="text-[#080808] font-medium text-base text-left font-outfit">Mobile Number</label><br />
+        <input
+          type="text"
+          placeholder="Enter your number"
+          class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px]"
+          id="phone-number"
+        />
+      </div>
+      <div class="mt-[16px]">
+        <label for="pin" class="text-[#080808] font-medium text-base text-left font-outfit">4 Digit Pin</label><br />
+        <input
+          type="password"
+          placeholder="Enter 4 Digit Pin"
+          class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px]"
+          id="pin"
+        />
+      </div>
+      <button id="login-btn" class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px]">Login</button>
+    </form>
+    <!-- js scripts -->
+    <script src="./js files/script.js"></script>
+  </body>
+</html>

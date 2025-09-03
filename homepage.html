@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo MFS Homepage</title>
+    <!-- daisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="w-[450px] mx-auto bg-gray-100">
+    <div class="rounded-b-[24px] bg-white pb-[24px]">
+      <!-- navbar -->
+      <div
+        class="flex justify-between items-center px-[24px] py-[16px] border-b border-[rgba(8,8,8,0.1)]"
+      >
+        <div class="flex justify-center items-center">
+          <div>
+            <img
+              src="./assets/Group.png"
+              alt="logo"
+              class="w-[50.56px] h-[48px]"
+            />
+          </div>
+          <div>
+            <h3
+              class="text-[rgba(8,8,8,0.9)] font-outfit text-lg font-extrabold text-left"
+            >
+              $<span id="balance">45000</span>
+            </h3>
+            <p class="text-[rgba(8,8,8,0.5)] font-outfit text-sm font-normal">
+              Available Balance
+            </p>
+          </div>
+        </div>
+        <div>
+          <button
+            class="btn box-border border border-[rgba(8,8,8,0.1)] rounded-lg px-3 py-2"
+          >
+            <i
+              class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#666768]"
+            ></i
+            ><span
+              class="text-[rgba(8,8,8,0.5)] font-outfit text-sm font-normal"
+              >Log Out</span
+            >
+          </button>
+        </div>
+      </div>
+      <!-- welcome section  -->
+      <div class="mt-[32px] mx-6">
+        <h1
+          class="text-[rgba(8,8,8,1)] font-[Outfit] text-2xl font-normal leading-[30px] text-left mb-3"
+        >
+          🔥 Welcome to Payooo!
+        </h1>
+        <p
+          class="text-[rgba(8,8,8,0.5)] font-[Outfit] text-base font-normal leading-[26px] text-left"
+        >
+          Enjoy easy and convenient financial services with us. Cashout charges
+          are low, transactions are fast, and managing your money has never been
+          easier.
+        </p>
+      </div>
+      <!-- utilities section cashout , cashin, transfer, paybill -->
+      <div
+        class="text-[rgba(8,8,8,0.7)] font-[Outfit] text-sm font-normal grid grid-cols-3 gap-[16.5px] w-[402px] h-[196.5px] mt-[24px] mx-auto"
+      >
+        <div
+          class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px]"
+        >
+          <img src="./assets/wallet1.png" alt="add money" />
+          <h3>Add Money</h3>
+        </div>
+        <div
+          class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px]"
+        >
+          <img src="./assets/send1.png" alt="Cashout" />
+          <h3>Cashout</h3>
+        </div>
+        <div
+          class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px] text-center"
+        >
+          <img src="./assets/money1.png" alt="Transfer Money" />
+          <h3>Transfer Money</h3>
+        </div>
+        <div
+          class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px]"
+        >
+          <img src="./assets/bonus1.png" alt="Get Bonus" />
+          <h3>Get Bonus</h3>
+        </div>
+        <div
+          class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px]"
+        >
+          <img src="./assets/purse1.png" alt="pay bill" />
+          <h3>Pay Bill</h3>
+        </div>
+        <div
+          class="w-[123px] h-[90px] flex flex-col justify-center items-center px-[10px] py-[20px] box-border border border-[rgba(8,8,8,0.1)] rounded-[12px]"
+        >
+          <img src="./assets/transaction1.png" alt="Transactions" />
+          <h3>Transactions</h3>
+        </div>
+      </div>
+    </div>
+    <!-- all forms section -->
+    <div class="all-forms mt-[31.5px]">
+      <!-- add money -->
+      <div>
+        <h1
+          class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px]"
+        >
+          Add Money
+        </h1>
+        <form class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-[402px] mx-auto">
+          <!-- Select Bank -->
+          <div>
+            <label
+              for="bank"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+              >Select A Bank</label
+            ><br />
+            <select
+              id="selected-bank"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full appearance-none"
+            >
+              <option value="" disabled selected class="text-gray-400">
+                Select bank
+              </option>
+              <option>Sonali Bank PLC</option>
+              <option>Janata Bank PLC</option>
+              <option>BRAC Bank Limited</option>
+              <option>State Bank of India</option>
+              <option>HDFC Bank</option>
+              <option>ICICI Bank</option>
+              <option>Central Bank of Sri Lanka</option>
+              <option>Commercial Bank of Ceylon</option>
+              <option>Sampath Bank</option>
+            </select>
+          </div>
+
+          <!-- Bank Account Number -->
+          <div class="mt-[16px]">
+            <label
+              for="account"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+              >Bank Account Number</label
+            ><br />
+            <input
+              type="text"
+              id="bank-account-number"
+              placeholder="Enter 11 digit account number"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
+            />
+          </div>
+
+          <!-- Amount to Add -->
+          <div class="mt-[16px]">
+            <label
+              for="amount"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+              >Amount to Add</label
+            ><br />
+            <input
+              type="number"
+              id="add-amount"
+              placeholder="Add Amount to withdraw"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
+            />
+          </div>
+
+          <!-- Pin Number -->
+          <div class="mt-[16px]">
+            <label
+              for="pin"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+              >Pin Number</label
+            ><br />
+            <input
+              type="password"
+              id="pin"
+              placeholder="Enter 4 digit pin"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="add-money-btn"
+            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium"
+          >
+            Add Money
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./js files/homepage.js"></script>
+  </body>
+</html>
