@@ -214,7 +214,78 @@
           </button>
         </form>
       </div>
+      <!-- cash out -->
+      <div class="mt-[31.5px]">
+        <h1
+          class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
+        >
+          Cash Out
+        </h1>
+        <form
+          class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
+        >
+          <!-- Agent Number -->
+          <div>
+            <label
+              for="agent-number"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Agent Number
+            </label>
+            <br />
+            <input
+              type="text"
+              id="agent-number"
+              placeholder="Enter 11 digit number"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <!-- Amount -->
+          <div class="mt-[16px]">
+            <label
+              for="amount"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Amount
+            </label>
+            <br />
+            <input
+              type="number"
+              id="amount"
+              placeholder="Enter amount to withdraw"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <!-- Pin Number -->
+          <div class="mt-[16px]">
+            <label
+              for="pin"
+              class="text-[#080808] font-medium text-base text-left font-outfit"
+            >
+              Pin Number
+            </label>
+            <br />
+            <input
+              type="password"
+              id="pin"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base"
+          >
+            Withdraw Money
+          </button>
+        </form>
+      </div>
     </div>
+
+    <!-- js scripts -->
     <script src="./js files/homepage.js"></script>
   </body>
 </html>
