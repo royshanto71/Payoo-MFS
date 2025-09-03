@@ -1,57 +1,98 @@
-const accPin = 1234; //account pin
+const accPin = 1234; // account pin (for demo)
 
-//add money btn functionality
-const addMoneyBtn = document
+// ADD MONEY BUTTON FUNCTIONALITY
+document
   .getElementById("add-money-btn")
   .addEventListener("click", function (event) {
-    event.preventDefault(); //prevent form from submitting
-    console.log("add money button clicked");//debug
+    event.preventDefault(); // prevent form submission
 
-    //add money form details
-    const bankName = document.getElementById("selected-bank").value;
-    const accountNumber = document.getElementById("bank-account-number").value;
-    const addAmount = parseInt(document.getElementById("add-amount").value);
-    const pin = parseInt(document.getElementById("pin").value);
-    console.log(bankName, accountNumber, addAmount, pin);//debug
-
-    //get available balance
-    const availableBalance = parseInt(
-      document.getElementById("balance").innerText
+    const bankName = document.getElementById("add-money-bank").value;
+    const accountNumber = document.getElementById(
+      "add-money-account-number"
+    ).value;
+    const addAmount = parseInt(
+      document.getElementById("add-money-amount").value
     );
-    console.log(availableBalance);
+    const pin = parseInt(document.getElementById("add-money-pin").value);
 
-    //calculate new balance
-    const newBalance = availableBalance + addAmount;
-    console.log(newBalance);//debug
+    if (!bankName || !accountNumber || !addAmount || !pin) {
+      alert("Please fill all fields");
+      return;
+    }
 
-    //check if account number is valid
     if (accountNumber.length !== 11) {
       alert("Invalid account number");
-      // clear form
-      document.getElementById("selected-bank").value = "";
-      document.getElementById("bank-account-number").value = "";
-      document.getElementById("add-amount").value = "";
-      document.getElementById("pin").value = "";
+      clearAddMoneyForm();
       return;
     }
 
-    //check if pin is valid
     if (pin !== accPin) {
       alert("Invalid pin");
-      // clear form
-      document.getElementById("selected-bank").value = "";
-      document.getElementById("bank-account-number").value = "";
-      document.getElementById("add-amount").value = "";
-      document.getElementById("pin").value = "";
+      clearAddMoneyForm();
       return;
     }
 
-    //update available balance
-    document.getElementById("balance").innerText = newBalance;
+    const balanceElement = document.getElementById("balance");
+    const availableBalance = parseInt(balanceElement.innerText);
+    const newBalance = availableBalance + addAmount;
 
-    //clear form
-    document.getElementById("selected-bank").value = "";
-    document.getElementById("bank-account-number").value = "";
-    document.getElementById("add-amount").value = "";
-    document.getElementById("pin").value = "";
+    balanceElement.innerText = newBalance;
+
+    clearAddMoneyForm();
   });
+
+// CASH OUT BUTTON FUNCTIONALITY
+document
+  .getElementById("cash-out-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();// prevent form submission
+
+    const agentNumber = document.getElementById("agent-number-cash-out").value;
+    const amount = parseInt(document.getElementById("amount-cash-out").value);
+    const pin = parseInt(document.getElementById("pin-cash-out").value);
+
+    if (!agentNumber || !amount || !pin) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    if (agentNumber.length !== 11) {
+      alert("Invalid agent number");
+      clearCashOutForm();
+      return;
+    }
+
+    if (pin !== accPin) {
+      alert("Invalid pin");
+      clearCashOutForm();
+      return;
+    }
+
+    const balanceElement = document.getElementById("balance");
+    const availableBalance = parseInt(balanceElement.innerText);
+
+    if (amount > availableBalance) {
+      alert("Insufficient balance");
+      clearCashOutForm();
+      return;
+    }
+
+    const newBalance = availableBalance - amount;
+    balanceElement.innerText = newBalance;
+
+    clearCashOutForm();
+  });
+
+// HELPER FUNCTIONS TO CLEAR FORMS
+function clearAddMoneyForm() {
+  document.getElementById("add-money-bank").value = "";
+  document.getElementById("add-money-account-number").value = "";
+  document.getElementById("add-money-amount").value = "";
+  document.getElementById("add-money-pin").value = "";
+}
+
+function clearCashOutForm() {
+  document.getElementById("agent-number-cash-out").value = "";
+  document.getElementById("amount-cash-out").value = "";
+  document.getElementById("pin-cash-out").value = "";
+}

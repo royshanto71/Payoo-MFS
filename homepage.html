@@ -143,12 +143,14 @@
           <!-- Select Bank -->
           <div>
             <label
-              for="bank"
+              for="add-money-bank"
               class="text-[#080808] font-medium text-base text-left font-outfit"
-              >Select A Bank</label
-            ><br />
+            >
+              Select A Bank
+            </label>
+            <br />
             <select
-              id="selected-bank"
+              id="add-money-bank"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full appearance-none"
             >
               <option value="" disabled selected class="text-gray-400">
@@ -169,13 +171,15 @@
           <!-- Bank Account Number -->
           <div class="mt-[16px]">
             <label
-              for="account"
+              for="add-money-account-number"
               class="text-[#080808] font-medium text-base text-left font-outfit"
-              >Bank Account Number</label
-            ><br />
+            >
+              Bank Account Number
+            </label>
+            <br />
             <input
               type="text"
-              id="bank-account-number"
+              id="add-money-account-number"
               placeholder="Enter 11 digit account number"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
             />
@@ -184,14 +188,16 @@
           <!-- Amount to Add -->
           <div class="mt-[16px]">
             <label
-              for="amount"
+              for="add-money-amount"
               class="text-[#080808] font-medium text-base text-left font-outfit"
-              >Amount to Add</label
-            ><br />
+            >
+              Amount to Add
+            </label>
+            <br />
             <input
               type="number"
-              id="add-amount"
-              placeholder="Add Amount to withdraw"
+              id="add-money-amount"
+              placeholder="Enter amount to add"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
             />
           </div>
@@ -199,12 +205,15 @@
           <!-- Pin Number -->
           <div class="mt-[16px]">
             <label
-              for="pin"
+              for="add-money-pin"
               class="text-[#080808] font-medium text-base text-left font-outfit"
-              >Pin Number</label
-            ><br />
+            >
+              Pin Number
+            </label>
+            <br />
             <input
               type="password"
+              id="add-money-pin"
               placeholder="Enter 4 digit pin"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
             />
@@ -219,6 +228,7 @@
           </button>
         </form>
       </div>
+
       <!-- cash out -->
       <div id="cash-out-form" class="mt-[31.5px]">
         <h1
@@ -232,7 +242,7 @@
           <!-- Agent Number -->
           <div>
             <label
-              for="agent-number"
+              for="agent-number-cash-out"
               class="text-[#080808] font-medium text-base text-left font-outfit"
             >
               Agent Number
@@ -240,7 +250,7 @@
             <br />
             <input
               type="text"
-              id="agent-number"
+              id="agent-number-cash-out"
               placeholder="Enter 11 digit number"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
             />
@@ -249,7 +259,7 @@
           <!-- Amount -->
           <div class="mt-[16px]">
             <label
-              for="amount"
+              for="amount-cash-out"
               class="text-[#080808] font-medium text-base text-left font-outfit"
             >
               Amount
@@ -257,7 +267,7 @@
             <br />
             <input
               type="number"
-              id="cashout-amount"
+              id="amount-cash-out"
               placeholder="Enter amount to withdraw"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
             />
@@ -266,7 +276,7 @@
           <!-- Pin Number -->
           <div class="mt-[16px]">
             <label
-              for="pin"
+              for="pin-cash-out"
               class="text-[#080808] font-medium text-base text-left font-outfit"
             >
               Pin Number
@@ -274,12 +284,14 @@
             <br />
             <input
               type="password"
+              id="pin-cash-out"
               placeholder="Enter 4 digit pin number"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
             />
           </div>
 
           <button
+            id="cash-out-btn"
             type="submit"
             class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base"
           >
@@ -287,6 +299,7 @@
           </button>
         </form>
       </div>
+
       <!-- transfer money -->
       <div id="transfer-form" class="mt-[31.5px]">
         <h1
@@ -325,7 +338,7 @@
             <br />
             <input
               type="number"
-              id="transfer-amount"
+              id="amount"
               placeholder="Enter amount to transfer"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
             />
@@ -342,6 +355,7 @@
             <br />
             <input
               type="password"
+              id="pin"
               placeholder="Enter 4 digit pin number"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
             />
@@ -449,7 +463,7 @@
             <br />
             <input
               type="number"
-              id="paybill-amount"
+              id="amount"
               placeholder="Add Amount to pay"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
             />
@@ -466,6 +480,7 @@
             <br />
             <input
               type="password"
+              id="pin"
               placeholder="Enter 4 digit pin number"
               class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
             />

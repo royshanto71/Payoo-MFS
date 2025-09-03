@@ -10,5 +10,5 @@ const transactions = document.getElementById("transactions");
 
 //add event listeners
 addMoney.addEventListener("click", function () {
-    console.log("Add Money clicked");
+    
 });
