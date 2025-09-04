@@ -129,6 +129,47 @@ document
     clearTransferForm();
   });
 
+// BONUS COUPONS (demo list)
+const bonusCoupons = {
+  BONUS100: 100,
+  BONUS200: 200,
+  WELCOME50: 50,
+};
+
+// GET BONUS BUTTON FUNCTIONALITY
+document
+  .getElementById("get-bonusby-coupon-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // prevent form submission
+
+    const coupon = document
+      .getElementById("bonus-coupon")
+      .value.trim()
+      .toUpperCase();
+
+    if (!coupon) {
+      alert("Please enter a coupon code");
+      return;
+    }
+
+    if (!bonusCoupons[coupon]) {
+      alert("Invalid coupon code");
+      clearBonusForm();
+      return;
+    }
+
+    const bonusAmount = bonusCoupons[coupon];
+    const balanceElement = document.getElementById("balance");
+    const availableBalance = parseInt(balanceElement.innerText);
+    const newBalance = availableBalance + bonusAmount;
+
+    balanceElement.innerText = newBalance;
+
+    alert(`🎉 Coupon applied! You received ${bonusAmount} bonus.`);
+
+    clearBonusForm();
+  });
+
 // HELPER FUNCTIONS TO CLEAR FORMS
 function clearAddMoneyForm() {
   document.getElementById("add-money-bank").value = "";
@@ -147,4 +188,7 @@ function clearTransferForm() {
   document.getElementById("account-number-for-transfer").value = "";
   document.getElementById("amount-to-transfer").value = "";
   document.getElementById("pin-for-transfer").value = "";
+}
+function clearBonusForm() {
+  document.getElementById("bonus-coupon").value = "";
 }

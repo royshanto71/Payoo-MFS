@@ -387,8 +387,9 @@
         >
           Get Bonus
         </h1>
+
         <form
-          class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
+          class="bg-white p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
         >
           <!-- Bonus Coupon -->
           <div>
@@ -398,23 +399,27 @@
             >
               Enter Bonus Coupon
             </label>
-            <br />
             <input
               type="text"
               id="bonus-coupon"
+              name="bonusCoupon"
               placeholder="Enter your coupon"
-              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+              class="bg-[#F4F5F7] text-[#080808] font-light text-base font-outfit rounded-[32px] mt-[12px] w-full px-4 py-2 outline-none focus:ring-2 focus:ring-[#0874F2]"
+              required
             />
           </div>
 
+          <!-- Submit Button -->
           <button
+            id="get-bonusby-coupon-btn"
             type="submit"
-            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base"
+            class="rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base hover:bg-[#0663cc] transition"
           >
             Get Bonus
           </button>
         </form>
       </div>
+
       <!-- pay bill section  -->
       <div id="pay-bill-form" class="mt-[31.5px]">
         <h1
