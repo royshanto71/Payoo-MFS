@@ -307,68 +307,79 @@
         >
           Transfer Money
         </h1>
+
         <form
-          class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
+          class="bg-white p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
         >
           <!-- User Account Number -->
           <div>
             <label
-              for="account-number"
+              for="account-number-for-transfer"
               class="text-[#080808] font-medium text-base text-left font-outfit"
             >
               User Account Number
             </label>
-            <br />
             <input
               type="text"
-              id="account-number"
+              id="account-number-for-transfer"
+              name="accountNumber"
               placeholder="Enter 11 digit number"
-              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+              maxlength="11"
+              class="bg-[#F4F5F7] text-[#080808] font-light text-base font-outfit rounded-[32px] mt-[12px] w-full px-4 py-2 outline-none focus:ring-2 focus:ring-[#0874F2]"
+              required
             />
           </div>
 
           <!-- Amount -->
           <div class="mt-[16px]">
             <label
-              for="amount"
+              for="amount-to-transfer"
               class="text-[#080808] font-medium text-base text-left font-outfit"
             >
               Amount
             </label>
-            <br />
             <input
               type="number"
-              id="amount"
+              id="amount-to-transfer"
+              name="amount"
               placeholder="Enter amount to transfer"
-              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+              min="1"
+              class="bg-[#F4F5F7] text-[#080808] font-light text-base font-outfit rounded-[32px] mt-[12px] w-full px-4 py-2 outline-none focus:ring-2 focus:ring-[#0874F2]"
+              required
             />
           </div>
 
           <!-- Pin Number -->
           <div class="mt-[16px]">
             <label
-              for="pin"
+              for="pin-for-transfer"
               class="text-[#080808] font-medium text-base text-left font-outfit"
             >
               Pin Number
             </label>
-            <br />
             <input
               type="password"
-              id="pin"
+              id="pin-for-transfer"
+              name="pin"
               placeholder="Enter 4 digit pin number"
-              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+              minlength="4"
+              maxlength="4"
+              class="bg-[#F4F5F7] text-[#080808] font-light text-base font-outfit rounded-[32px] mt-[12px] w-full px-4 py-2 outline-none focus:ring-2 focus:ring-[#0874F2]"
+              required
             />
           </div>
 
+          <!-- Submit Button -->
           <button
+            id="transfer-money-btn"
             type="submit"
-            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base"
+            class="rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base hover:bg-[#0663cc] transition"
           >
             Send Now
           </button>
         </form>
       </div>
+
       <!-- get bonus section  -->
       <div id="get-bonus-form" class="mt-[31.5px]">
         <h1

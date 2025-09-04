@@ -45,7 +45,7 @@ document
 document
   .getElementById("cash-out-btn")
   .addEventListener("click", function (event) {
-    event.preventDefault();// prevent form submission
+    event.preventDefault(); // prevent form submission
 
     const agentNumber = document.getElementById("agent-number-cash-out").value;
     const amount = parseInt(document.getElementById("amount-cash-out").value);
@@ -83,6 +83,52 @@ document
     clearCashOutForm();
   });
 
+// TRANSFER MONEY BUTTON FUNCTIONALITY
+document
+  .getElementById("transfer-money-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // prevent form submission
+
+    const accountNumber = document.getElementById(
+      "account-number-for-transfer"
+    ).value;
+    const amount = parseInt(
+      document.getElementById("amount-to-transfer").value
+    );
+    const pin = parseInt(document.getElementById("pin-for-transfer").value);
+
+    if (!accountNumber || !amount || !pin) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    if (accountNumber.length !== 11) {
+      alert("Invalid account number");
+      clearTransferForm();
+      return;
+    }
+
+    if (pin !== accPin) {
+      alert("Invalid pin");
+      clearTransferForm();
+      return;
+    }
+
+    const balanceElement = document.getElementById("balance");
+    const availableBalance = parseInt(balanceElement.innerText);
+
+    if (amount > availableBalance) {
+      alert("Insufficient balance");
+      clearTransferForm();
+      return;
+    }
+
+    const newBalance = availableBalance - amount;
+    balanceElement.innerText = newBalance;
+
+    clearTransferForm();
+  });
+
 // HELPER FUNCTIONS TO CLEAR FORMS
 function clearAddMoneyForm() {
   document.getElementById("add-money-bank").value = "";
@@ -95,4 +141,10 @@ function clearCashOutForm() {
   document.getElementById("agent-number-cash-out").value = "";
   document.getElementById("amount-cash-out").value = "";
   document.getElementById("pin-cash-out").value = "";
+}
+
+function clearTransferForm() {
+  document.getElementById("account-number-for-transfer").value = "";
+  document.getElementById("amount-to-transfer").value = "";
+  document.getElementById("pin-for-transfer").value = "";
 }
