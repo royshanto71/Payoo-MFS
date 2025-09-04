@@ -62,3 +62,18 @@ transactionsBtn.addEventListener("click", function () {
 });
 
 hideAllSections(); // hides everything on page load
+
+//toggling btn styles
+
+const buttons = document.querySelectorAll(".utilities-btn");
+
+for (const button of buttons) {
+  button.addEventListener("click", function () {
+    // remove the active border from all
+    for (const btn of buttons) {
+      btn.classList.remove("border-[rgba(8,116,242,1)]");
+    }
+    // add it to the clicked button
+    button.classList.add("border-[rgba(8,116,242,1)]");
+  });
+}
