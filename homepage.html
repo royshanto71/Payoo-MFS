@@ -421,16 +421,15 @@
       </div>
 
       <!-- pay bill section  -->
-      <div id="pay-bill-form" class="mt-[31.5px]">
+      <div id="pay-bill-form">
         <h1
-          class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px] text-left"
+          class="text-[rgba(8,8,8,0.9)] font-outfit text-[18px] font-semibold mx-[24px] mb-[16px]"
         >
           Pay Bill
         </h1>
-        <form
-          class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-full max-w-[402px] mx-auto"
-        >
-          <!-- Select To Pay -->
+
+        <form class="bg-[#FFFFFFFF] p-[34px] rounded-3xl w-[402px] mx-auto">
+          <!-- Select Biller -->
           <div>
             <label
               for="biller"
@@ -441,7 +440,9 @@
             <br />
             <select
               id="biller"
-              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base font-outfit rounded-[32px] mt-[12px] w-full cursor-pointer"
+              name="biller"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full appearance-none cursor-pointer"
+              required
             >
               <option value="" disabled selected>Select biller</option>
               <option value="electricity">Electricity</option>
@@ -463,15 +464,17 @@
             <input
               type="text"
               id="biller-account"
+              name="billerAccount"
               placeholder="Enter account number"
-              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
+              required
             />
           </div>
 
           <!-- Amount to Pay -->
           <div class="mt-[16px]">
             <label
-              for="amount"
+              for="amount-to-pay"
               class="text-[#080808] font-medium text-base text-left font-outfit"
             >
               Amount to Pay
@@ -479,16 +482,18 @@
             <br />
             <input
               type="number"
-              id="amount"
-              placeholder="Add Amount to pay"
-              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+              id="amount-to-pay"
+              name="amount"
+              placeholder="Enter amount to pay"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
+              required
             />
           </div>
 
           <!-- Pin Number -->
           <div class="mt-[16px]">
             <label
-              for="pin"
+              for="pin-for-paybill"
               class="text-[#080808] font-medium text-base text-left font-outfit"
             >
               Pin Number
@@ -496,20 +501,27 @@
             <br />
             <input
               type="password"
-              id="pin"
+              id="pin-for-paybill"
+              name="pin"
               placeholder="Enter 4 digit pin number"
-              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full"
+              class="input bg-[#F4F5F7FF] text-[#080808] font-light text-base text-left font-outfit rounded-[32px] mt-[12px] w-full p-3"
+              minlength="4"
+              maxlength="4"
+              required
             />
           </div>
 
+          <!-- Submit Button -->
           <button
             type="submit"
-            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium text-base"
+            id="paybill-btn"
+            class="btn btn-primary rounded-[32px] bg-[#0874F2] w-full mt-[16px] p-3 text-white font-medium"
           >
             Pay Now
           </button>
         </form>
       </div>
+
       <!-- transactions section -->
       <div
         id="transaction-history"

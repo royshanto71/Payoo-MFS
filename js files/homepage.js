@@ -170,6 +170,54 @@ document
     clearBonusForm();
   });
 
+// PAY BILL FUNCTIONALITY
+document
+  .getElementById("paybill-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // prevent form submission
+
+    const biller = document.getElementById("biller").value;
+    const accountNumber = document.getElementById("biller-account").value;
+    const amount = parseInt(document.getElementById("amount-to-pay").value);
+    const pin = parseInt(document.getElementById("pin-for-paybill").value);
+
+    // Check all fields
+    if (!biller || !accountNumber || !amount || !pin) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    // Validate account number
+    if (accountNumber.length !== 11) {
+      alert("Invalid account number");
+      clearPayBillForm();
+      return;
+    }
+
+    // Validate pin
+    if (pin !== accPin) {
+      alert("Invalid pin");
+      clearPayBillForm();
+      return;
+    }
+
+    // Check balance
+    const balanceElement = document.getElementById("balance");
+    const availableBalance = parseInt(balanceElement.innerText);
+
+    if (amount > availableBalance) {
+      alert("Insufficient balance");
+      clearPayBillForm();
+      return;
+    }
+
+    // Deduct amount
+    balanceElement.innerText = availableBalance - amount;
+    alert("Bill payment successful!");
+
+    clearPayBillForm();
+  });
+
 // HELPER FUNCTIONS TO CLEAR FORMS
 function clearAddMoneyForm() {
   document.getElementById("add-money-bank").value = "";
@@ -191,4 +239,10 @@ function clearTransferForm() {
 }
 function clearBonusForm() {
   document.getElementById("bonus-coupon").value = "";
+}
+function clearPayBillForm() {
+  document.getElementById("biller").value = "";
+  document.getElementById("biller-account").value = "";
+  document.getElementById("amount-to-pay").value = "";
+  document.getElementById("pin-for-paybill").value = "";
 }
