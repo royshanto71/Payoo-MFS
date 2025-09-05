@@ -14,7 +14,7 @@ const bonusForm = document.getElementById("get-bonus-form");
 const payBillForm = document.getElementById("pay-bill-form");
 const transactionHistorySection = document.getElementById(
   "transaction-history"
-); // ✅ renamed
+);
 
 // HELPER FUNCTION TO HIDE ALL SECTIONS
 function hideAllSections() {
@@ -23,7 +23,7 @@ function hideAllSections() {
   transferForm.style.display = "none";
   bonusForm.style.display = "none";
   payBillForm.style.display = "none";
-  transactionHistorySection.style.display = "none"; // ✅ updated
+  transactionHistorySection.style.display = "none";
 }
 
 // ADD EVENT LISTENERS FOR TOGGLING
@@ -59,7 +59,7 @@ payBillBtn.addEventListener("click", function () {
 
 transactionsBtn.addEventListener("click", function () {
   hideAllSections();
-  transactionHistorySection.style.display = "block"; // ✅ updated
+  transactionHistorySection.style.display = "block";
   console.log("Transactions clicked");
 });
 

@@ -1,5 +1,5 @@
 const accPin = 1234; // account pin (for demo)
-const transactionHistory = []; // ✅ fixed spelling
+const transactionHistory = []; //
 
 // ADD MONEY BUTTON FUNCTIONALITY
 document
@@ -44,7 +44,7 @@ document
       title: "Add Money",
       date: new Date().toLocaleString(),
     };
-    transactionHistory.push(transaction); // ✅ fixed
+    transactionHistory.push(transaction);
   });
 
 // CASH OUT BUTTON FUNCTIONALITY
@@ -92,7 +92,7 @@ document
       title: "Cash Out",
       date: new Date().toLocaleString(),
     };
-    transactionHistory.push(transaction); // ✅ fixed
+    transactionHistory.push(transaction);
   });
 
 // TRANSFER MONEY BUTTON FUNCTIONALITY
@@ -144,7 +144,7 @@ document
       title: "Transfer Money",
       date: new Date().toLocaleString(),
     };
-    transactionHistory.push(transaction); // ✅ fixed
+    transactionHistory.push(transaction);
   });
 
 // BONUS COUPONS (demo list)
@@ -191,7 +191,7 @@ document
       title: "Coupon Bonus",
       date: new Date().toLocaleString(),
     };
-    transactionHistory.push(transaction); // ✅ fixed
+    transactionHistory.push(transaction);
   });
 
 // PAY BILL FUNCTIONALITY
@@ -240,7 +240,7 @@ document
       title: "Pay Bill",
       date: new Date().toLocaleString(),
     };
-    transactionHistory.push(transaction); // ✅ fixed
+    transactionHistory.push(transaction);
   });
 
 // HELPER FUNCTIONS TO CLEAR FORMS
