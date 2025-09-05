@@ -33,6 +33,12 @@ document
       return;
     }
 
+    if (addAmount <= 0) {
+      alert("Invalid amount");
+      clearAddMoneyForm();
+      return;
+    }
+
     const balanceElement = document.getElementById("balance");
     const availableBalance = parseInt(balanceElement.innerText);
     const newBalance = availableBalance + addAmount;
@@ -74,6 +80,12 @@ document
       return;
     }
 
+    if (amount <= 0) {
+      alert("Invalid amount");
+      clearCashOutForm();
+      return;
+    }
+
     const balanceElement = document.getElementById("balance");
     const availableBalance = parseInt(balanceElement.innerText);
 
@@ -85,6 +97,8 @@ document
 
     const newBalance = availableBalance - amount;
     balanceElement.innerText = newBalance;
+    
+    alert("Cash out successful");
 
     clearCashOutForm();
 
@@ -126,6 +140,12 @@ document
       return;
     }
 
+    if (amount <= 0) {
+      alert("Invalid amount");
+      clearTransferForm();
+      return;
+    }
+
     const balanceElement = document.getElementById("balance");
     const availableBalance = parseInt(balanceElement.innerText);
 
@@ -134,6 +154,8 @@ document
       clearTransferForm();
       return;
     }
+
+    alert("Transfer successful");
 
     const newBalance = availableBalance - amount;
     balanceElement.innerText = newBalance;
@@ -218,6 +240,12 @@ document
 
     if (pin !== accPin) {
       alert("Invalid pin");
+      clearPayBillForm();
+      return;
+    }
+
+    if (amount <= 0) {
+      alert("Invalid amount");
       clearPayBillForm();
       return;
     }
