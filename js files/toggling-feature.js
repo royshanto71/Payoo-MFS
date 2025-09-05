@@ -12,7 +12,9 @@ const cashOutForm = document.getElementById("cash-out-form");
 const transferForm = document.getElementById("transfer-form");
 const bonusForm = document.getElementById("get-bonus-form");
 const payBillForm = document.getElementById("pay-bill-form");
-const transactionHistory = document.getElementById("transaction-history");
+const transactionHistorySection = document.getElementById(
+  "transaction-history"
+); // ✅ renamed
 
 // HELPER FUNCTION TO HIDE ALL SECTIONS
 function hideAllSections() {
@@ -21,7 +23,7 @@ function hideAllSections() {
   transferForm.style.display = "none";
   bonusForm.style.display = "none";
   payBillForm.style.display = "none";
-  transactionHistory.style.display = "none";
+  transactionHistorySection.style.display = "none"; // ✅ updated
 }
 
 // ADD EVENT LISTENERS FOR TOGGLING
@@ -57,14 +59,13 @@ payBillBtn.addEventListener("click", function () {
 
 transactionsBtn.addEventListener("click", function () {
   hideAllSections();
-  transactionHistory.style.display = "block";
+  transactionHistorySection.style.display = "block"; // ✅ updated
   console.log("Transactions clicked");
 });
 
 hideAllSections(); // hides everything on page load
 
-//toggling btn styles
-
+// TOGGLING BTN STYLES
 const buttons = document.querySelectorAll(".utilities-btn");
 
 for (const button of buttons) {
