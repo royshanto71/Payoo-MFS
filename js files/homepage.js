@@ -281,7 +281,7 @@ document.getElementById("transactions").addEventListener("click", function () {
     const transactionElement = document.createElement("div");
     transactionElement.innerHTML = `
       <div
-        class="notification flex justify-between items-center w-[402px] mx-auto px-[16px] py-[13px] border border-[rgba(8,8,8,0.1)] rounded-[12px] bg-white"
+        class="notification flex justify-between items-center w-[402px] mx-auto px-[16px] py-[13px] border border-[rgba(8,8,8,0.1)] rounded-[12px] bg-white mb-[12px]"
       >
         <div class="flex items-center">
           <div class="icon mr-[8px] p-[16px] rounded-[32px] bg-[rgba(8,8,8,0.05)]">
